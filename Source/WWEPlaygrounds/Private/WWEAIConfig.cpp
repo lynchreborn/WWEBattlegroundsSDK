@@ -1,0 +1,65 @@
+#include "WWEAIConfig.h"
+
+UWWEAIConfig::UWWEAIConfig() {
+    this->difficulty = EPGMatchDifficultyConfigs::Rookie;
+    this->ReactionTime = 0.30f;
+    this->SignatureChance = 1.00f;
+    this->WanderChance = 0.50f;
+    this->MinWanderWaitTime = 0.40f;
+    this->MaxWanderWaitTime = 0.80f;
+    this->WanderWaitMultiplierPerExtraPlayer = 0.50f;
+    this->AfterLastSignatureWaitTime = 15.00f;
+    this->SubmissionMaxRivalHealth = 0.40f;
+    this->DownRingToUpRingWaitTime = 6.00f;
+    this->ExitRingNoCountdownMultiplier = 2.00f;
+    this->OutOfRingCountdownToNotExitRing = 5;
+    this->CommonWeight = 1.00f;
+    this->SpecialWeight = 2.00f;
+    this->UniqueWeight = 5.00f;
+    this->ActiveLevelEventCarryMultiplier = 2.00f;
+    this->HealthRatioDifferenceToTagTeammate = 0.20f;
+    this->WeightMultiplierPerExtraHealthRatioDifference = 10.00f;
+    this->WeightMultiplierPerSecondOnBothLowHealth = 0.10f;
+    this->HitComboMinAmount = 1;
+    this->HitComboMaxAmount = 4;
+    this->AllRounderRunningKickChance = 0.30f;
+    this->CloseCombatDistance = 200.00f;
+    this->FarCombatDistance = 400.00f;
+    this->WanderThreshold = 50.00f;
+    this->BaseMinigameMinHitsPerSecond = 4.00f;
+    this->BaseMinigameMaxHitsPerSecond = 6.00f;
+    this->PinMinigameMinHitsPerSecond = 8.00f;
+    this->PinMinigameMaxHitsPerSecond = 10.00f;
+    this->SubmissionMinigameMinHitsPerSecondOnAttack = 8.00f;
+    this->SubmissionMinigameMaxHitsPerSecondOnAttack = 10.00f;
+    this->SubmissionMinigameMinHitsPerSecondOnDefense = 8.00f;
+    this->SubmissionMinigameMaxHitsPerSecondOnDefense = 10.00f;
+    this->SteelCageMinigameMinHitsPerSecond = 4.00f;
+    this->SteelCageMinigameMaxHitsPerSecond = 6.00f;
+    this->TurnbuckleMinigameChance = 0.70f;
+    this->NoPowerupWeight = 2.00f;
+    this->BasePowerupWeights.AddDefaulted(3);
+    this->StoneWallMinHealthRatio = 0.20f;
+    this->ImmunityMinHealthRatio = 0.20f;
+    this->RegenerationMaxHealthRatio = 0.80f;
+    this->SuperHealingMaxHealthRatio = 0.80f;
+    this->PowerPinMaxRivalHealthRatio = 0.40f;
+    this->PowerPinRivalDumpedExtraWeightMultiplier = 0.50f;
+    this->StaminaDrainMinRivalStaminaRatio = 0.33f;
+    this->EnergyThiefMinRivalHeatRatio = 0.33f;
+    this->CurseMinRivalPowerUpPointsRatio = 0.33f;
+    this->WeaponMasterGetWeaponMultiplier = 5.00f;
+    this->PerfectSkillThrowMultiplier = 5.00f;
+    this->PerfectThrowMultiplier = 20.00f;
+    this->DrillingAttacksNormalHitMultiplier = 0.00f;
+    this->PinIntentionMaxHealthRatio = 0.30f;
+    this->PinIntentionMinHealthRatio = 0.00f;
+    this->PinIntentionMinMultiplier = 1.00f;
+    this->PinIntentionMaxMultiplier = 4.00f;
+    this->PinReactChanceCurve = NULL;
+    this->RoyalRumbleMaxHealthRatio = 0.50f;
+    this->RoyalRumbleMinHealthRatio = 0.00f;
+    this->RoyalRumbleMinMultiplier = 1.00f;
+    this->RoyalRumbleMaxMultiplier = 5.00f;
+}
+
