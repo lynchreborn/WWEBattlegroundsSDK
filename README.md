@@ -4,4 +4,5 @@ Created using UE4SS Header Dumpers.
 
 Can build and launch...
 
+Cook button works.
 Cannot package (yet)
