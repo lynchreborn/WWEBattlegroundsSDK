@@ -1,4 +1,4 @@
 // USBUserWidget.cpp
-#include "WWEPlaygrounds/Public/USBUserWidget.h"
+#include "USBUserWidget.h"
 
 // Implement your functions and properties here
