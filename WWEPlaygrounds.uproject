@@ -375,10 +375,6 @@
 			]
 		},
 		{
-			"Name": "OnlineSubsystemSaber",
-			"Enabled": true
-		},
-		{
 			"Name": "WebBrowserWidget",
 			"Enabled": true
 		},
