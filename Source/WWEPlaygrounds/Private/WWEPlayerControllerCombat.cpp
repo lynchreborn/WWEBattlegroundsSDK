@@ -26,7 +26,6 @@ AWWEPlayerControllerCombat::AWWEPlayerControllerCombat() {
     this->bOnGameplayLose = false;
     this->ControlComponent = CreateDefaultSubobject<UWWEControlComponentCombat>(TEXT("ControlComponent"));
     this->ControlRamComponent = CreateDefaultSubobject<UWWEAngryRamControlComponent>(TEXT("ControlRamComponent"));
-    this->ActualControlComponent = CreateDefaultSubobject<UWWEControlComponentCombat>(TEXT("ControlComponent"));
     this->ContextualActionsComponent = CreateDefaultSubobject<UWWEContextualActionsComponent>(TEXT("ActionsComponentName"));
     this->LearningComponent = CreateDefaultSubobject<UWWELearningComponent>(TEXT("LearningComponent"));
 }
