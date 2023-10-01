@@ -1,0 +1,45 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "EWWEBodyPartsOccupy.generated.h"
+
+UENUM(BlueprintType)
+enum class EWWEBodyPartsOccupy : uint8 {
+    NONE,
+    TopHead,
+    MiddleHead,
+    BottomHead,
+    Eyes,
+    Teeth,
+    Chest,
+    WristbandUpLeftNear,
+    WristbandUpRightNear,
+    WristbandUpLeftFar,
+    WristbandUpRightFar,
+    WristbandDownTopLeftNear,
+    WristbandDownTopRightNear,
+    WristbandDownTopLeftFar,
+    WristbandDownTopRightFar,
+    WristbandDownMiddleLeftNear,
+    WristbandDownMiddleRightNear,
+    WristbandDownMiddleLeftFar,
+    WristbandDownMiddleRightFar,
+    WristbandDownBottomLeftNear,
+    WristbandDownBottomRightNear,
+    WristbandDownBottomLeftFar,
+    WristbandDownBottomRightFar,
+    LeftGlove,
+    RightGlove,
+    Pants,
+    LegMiddleLeftNear,
+    LegMiddleRightNear,
+    LegMiddleLeftFar,
+    LegMiddleRightFar,
+    LegBottomLeftNear,
+    LegBottomRightNear,
+    LegBottomLeftFar,
+    LegBottomRightFar,
+    Feet,
+    FullBody,
+    COUNT,
+};
+
