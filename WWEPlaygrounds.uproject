@@ -1,0 +1,397 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{24928D0F-4994-BBFD-3BF6-7496F01BAB39}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "WWEPlaygrounds",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"PlaygroundsGame",
+				"SaberGame",
+				"CoreUObject",
+				"AIModule",
+				"UMG",
+				"CinematicCamera"
+			]
+		},
+		{
+			"Name": "PlaygroundsGame",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"CoreUObject",
+				"AIModule",
+				"SaberGame"
+			]
+		},
+		{
+			"Name": "SaberGame",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"CoreUObject",
+				"AIModule",
+				"UMG",
+				"MovieScene"
+			]
+		},
+		{
+			"Name": "WWECustomCollision",
+			"Type": "Runtime",
+			"LoadingPhase": "PreLoadingScreen"
+		},
+		{
+			"Name": "OnlineSubsystemSteam",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "MirrorAnimationSystem",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/36b1fe6319794a25ab6dfffb82e1b29b"
+		},
+		{
+			"Name": "Paper2D",
+			"Enabled": false
+		},
+		{
+			"Name": "GitSourceControl",
+			"Enabled": false
+		},
+		{
+			"Name": "SubversionSourceControl",
+			"Enabled": false
+		},
+		{
+			"Name": "AndroidDeviceProfileSelector",
+			"Enabled": false
+		},
+		{
+			"Name": "AndroidPermission",
+			"Enabled": false
+		},
+		{
+			"Name": "IOSDeviceProfileSelector",
+			"Enabled": false
+		},
+		{
+			"Name": "LinuxDeviceProfileSelector",
+			"Enabled": true,
+			"WhitelistPlatforms": [
+				"Linux"
+			]
+		},
+		{
+			"Name": "UObjectPlugin",
+			"Enabled": false
+		},
+		{
+			"Name": "MobileLauncherProfileWizard",
+			"Enabled": false
+		},
+		{
+			"Name": "AlembicImporter",
+			"Enabled": false
+		},
+		{
+			"Name": "AndroidMedia",
+			"Enabled": false
+		},
+		{
+			"Name": "XCodeSourceCodeAccess",
+			"Enabled": false
+		},
+		{
+			"Name": "HTTPChunkInstaller",
+			"Enabled": false
+		},
+		{
+			"Name": "ArchVisCharacter",
+			"Enabled": false
+		},
+		{
+			"Name": "LocationServicesBPLibrary",
+			"Enabled": false
+		},
+		{
+			"Name": "LocationServicesIOSImpl",
+			"Enabled": false
+		},
+		{
+			"Name": "MobilePatchingUtils",
+			"Enabled": false
+		},
+		{
+			"Name": "AppleMoviePlayer",
+			"Enabled": false
+		},
+		{
+			"Name": "AppleImageUtils",
+			"Enabled": false
+		},
+		{
+			"Name": "AppleVision",
+			"Enabled": false
+		},
+		{
+			"Name": "NullSourceCodeAccess",
+			"Enabled": false
+		},
+		{
+			"Name": "OculusVR",
+			"Enabled": false
+		},
+		{
+			"Name": "PhysXVehicles",
+			"Enabled": false
+		},
+		{
+			"Name": "SignificanceManager",
+			"Enabled": true
+		},
+		{
+			"Name": "SteamVR",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemGooglePlay",
+			"Enabled": false
+		},
+		{
+			"Name": "RuntimePhysXCooking",
+			"Enabled": true,
+			"WhitelistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "EditorTests",
+			"Enabled": false
+		},
+		{
+			"Name": "FbxAutomationTestBuilder",
+			"Enabled": false
+		},
+		{
+			"Name": "FunctionalTestingEditor",
+			"Enabled": false
+		},
+		{
+			"Name": "RuntimeTests",
+			"Enabled": false
+		},
+		{
+			"Name": "ScreenshotTools",
+			"Enabled": false
+		},
+		{
+			"Name": "ActorSequence",
+			"Enabled": false
+		},
+		{
+			"Name": "AndroidMoviePlayer",
+			"Enabled": false
+		},
+		{
+			"Name": "AppleARKit",
+			"Enabled": false
+		},
+		{
+			"Name": "AudioCapture",
+			"Enabled": false
+		},
+		{
+			"Name": "AvfMedia",
+			"Enabled": false
+		},
+		{
+			"Name": "CLionSourceCodeAccess",
+			"Enabled": false
+		},
+		{
+			"Name": "CodeLiteSourceCodeAccess",
+			"Enabled": false
+		},
+		{
+			"Name": "GoogleCloudMessaging",
+			"Enabled": false
+		},
+		{
+			"Name": "KDevelopSourceCodeAccess",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemIOS",
+			"Enabled": false
+		},
+		{
+			"Name": "LightPropagationVolume",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "CryptoKeys",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "FacialAnimation",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "DatasmithContent",
+			"Enabled": false
+		},
+		{
+			"Name": "CharacterAI",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "ImgMedia",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "LinearTimecode",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "MediaCompositing",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "MfMedia",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "WmfMedia",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "WebMMoviePlayer",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "WebMMedia",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "SteamController",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "WindowsMoviePlayer",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "CableComponent",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "CustomMeshComponent",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "ExampleDeviceProfileSelector",
+			"Enabled": true,
+			"WhitelistPlatforms": [
+				"Win64"
+			],
+			"WhitelistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "ProceduralMeshComponent",
+			"Enabled": true,
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "MagicLeapMedia",
+			"Enabled": false
+		},
+		{
+			"Name": "MagicLeap",
+			"Enabled": false
+		},
+		{
+			"Name": "MORT",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/f6a838d3c72b4d28b5635da50d3335e5",
+			"BlacklistTargets": [
+				"Server"
+			]
+		},
+		{
+			"Name": "OnlineSubsystemSaber",
+			"Enabled": true
+		},
+		{
+			"Name": "WebBrowserWidget",
+			"Enabled": true
+		},
+		{
+			"Name": "DNA2K",
+			"Enabled": true
+		},
+		{
+			"Name": "SBBlutility",
+			"Enabled": true
+		}
+	],
+	"TargetPlatforms": [
+		"Win64"
+	]
+}
