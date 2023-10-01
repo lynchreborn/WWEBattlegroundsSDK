@@ -78,151 +78,151 @@ public:
     UFUNCTION()
     void WriteTournamentRecord(UNakamaSession* Session, const FString& TournamentId, int64 Score, int64 SubScore, const FString& MetaData, const FOnWriteLeaderboardRecord& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void WriteStorageObjects(UNakamaSession* Session, TArray<FNakamaStoreObjectWrite> StorageObjectsData, const FOnStorageObjectAcks& Success, const FOnError& Error);
     
     UFUNCTION()
     void WriteLeaderboardRecord(UNakamaSession* Session, const FString& LeaderboardId, int64 Score, int64 SubScore, const FString& MetaData, const FOnWriteLeaderboardRecord& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UpdateGroup(UNakamaSession* Session, const FString& GroupId, const FString& Name, const FString& Description, const FString& AvatarUrl, const FString& LanguageTag, bool Open, const FOnUpdateGroup& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UpdateAccount(UNakamaSession* Session, const FString& username, const FString& DisplayName, const FString& AvatarUrl, const FString& LanguageTag, const FString& Location, const FString& TimeZone, const FOnUpdateAccount& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UnLinkSteam(UNakamaSession* Session, const FString& SteamToken, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UnLinkGoogle(UNakamaSession* Session, const FString& AccessToken, const FOnLinkSuccess& Success, const FOnError& Error);
     
     UFUNCTION()
     void UnLinkGameCenter(UNakamaSession* Session, const FString& PlayerId, const FString& BundleId, int64 TimeStampSeconds, const FString& Salt, const FString& Signature, const FString& PublicKeyUrl, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UnLinkFacebook(UNakamaSession* Session, const FString& AccessToken, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UnLinkEmail(UNakamaSession* Session, const FString& Email, const FString& password, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UnLinkDevice(UNakamaSession* Session, const FString& DeviceID, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UnLinkCustom(UNakamaSession* Session, const FString& CustomId, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UnLinkApple(UNakamaSession* Session, const FString& Token, const FOnLinkSuccess& Success, const FOnError& Error);
     
     UFUNCTION(BlueprintCallable)
     UNakamaRealtimeClient* SetupRealtimeClient(UNakamaSession* Session, bool ShowAsOnline, int32 Port, ENakamaRealtimeClientProtocol Protocol, float TickInterval, const FString& DisplayName);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void RPC(UNakamaSession* Session, const FString& FunctionId, const FString& Payload, const FOnRPC& Success, const FOnError& Error);
     
     UFUNCTION(BlueprintCallable)
     void RestoreSession(const FString& Token, const FString& RefreshToken, UNakamaSession*& RestoredSession);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void RemoveStorageObjects(UNakamaSession* Session, TArray<FNakamaDeleteStorageObjectId> StorageObjectsData, const FOnRemovedStorageObjects& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void RemoveFriends(UNakamaSession* Session, TArray<FString> IDs, TArray<FString> Usernames, const FOnRemovedFriends& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void RefreshSession(UNakamaSession* Session, const FOnAuthRefresh& Success, const FOnAuthRefreshError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ReadStorageObjects(UNakamaSession* Session, TArray<FNakamaReadStorageObjectId> StorageObjectsData, const FOnStorageObjectsRead& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void PromoteGroupUsers(UNakamaSession* Session, const FString& GroupId, TArray<FString> UserIds, const FOnPromoteGroupUsers& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListUserGroups(UNakamaSession* Session, const FString& UserID, int32 Limit, ENakamaGroupState State, const FString& Cursor, const FOnUserGroups& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListTournaments(UNakamaSession* Session, int32 CategoryStart, int32 CategoryEnd, int32 StartTime, int32 EndTime, int32 Limit, const FString& Cursor, const FOnListTournaments& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListTournamentRecordsAroundOwner(UNakamaSession* Session, const FString& TournamentId, const FString& OwnerId, int32 Limit, const FOnListTournamentRecords& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListTournamentRecords(UNakamaSession* Session, const FString& TournamentId, int32 Limit, const FString& Cursor, TArray<FString> OwnerIds, ENakamaLeaderboardListBy ListBy, const FOnListTournamentRecords& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListStorageObjects(UNakamaSession* Session, const FString& Collection, const FString& UserID, int32 Limit, const FString& Cursor, const FOnStorageObjectsListed& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListNotifications(UNakamaSession* Session, int32 Limit, const FString& Cursor, const FOnListNotifications& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListMatches(UNakamaSession* Session, int32 MinSize, int32 MaxSize, int32 Limit, const FString& Label, bool Authoritative, const FOnMatchlist& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListLeaderboardRecordsAroundOwner(UNakamaSession* Session, const FString& LeaderboardId, const FString& OwnerId, int32 Limit, const FOnListLeaderboardRecords& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListLeaderboardRecords(UNakamaSession* Session, const FString& LeaderboardId, TArray<FString> OwnerIds, int32 Limit, const FString& Cursor, ENakamaLeaderboardListBy ListBy, const FOnListLeaderboardRecords& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListGroupUsers(UNakamaSession* Session, const FString& GroupId, int32 Limit, ENakamaGroupState State, const FString& Cursor, const FOnListGroupMembers& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListGroups(UNakamaSession* Session, const FString& GroupNameFilter, int32 Limit, const FString& Cursor, const FOnGroupsList& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListChannelMessages(UNakamaSession* Session, const FString& ChannelId, int32 Limit, const FString& Cursor, bool Forward, const FOnListChannelMessages& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LinkSteam(UNakamaSession* Session, const FString& SteamToken, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LinkGoogle(UNakamaSession* Session, const FString& AccessToken, const FOnLinkSuccess& Success, const FOnError& Error);
     
     UFUNCTION()
     void LinkGameCenter(UNakamaSession* Session, const FString& PlayerId, const FString& BundleId, int64 TimeStampSeconds, const FString& Salt, const FString& Signature, const FString& PublicKeyUrl, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LinkFacebook(UNakamaSession* Session, const FString& AccessToken, bool ImportFriends, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LinkEmail(UNakamaSession* Session, const FString& Email, const FString& password, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LinkDevice(UNakamaSession* Session, const FString& DeviceID, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LinkCustom(UNakamaSession* Session, const FString& CustomId, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LinkApple(UNakamaSession* Session, const FString& Token, const FOnLinkSuccess& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LeaveGroup(UNakamaSession* Session, const FString& GroupId, const FOnLeaveGroup& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void KickGroupUsers(UNakamaSession* Session, const FString& GroupId, TArray<FString> UserIds, const FOnKickGroupUsers& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void JoinTournament(UNakamaSession* Session, const FString& TournamentId, const FOnJoinedTournament& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void JoinGroup(UNakamaSession* Session, const FString& GroupId, const FOnJoinedGroup& Success, const FOnError& Error);
     
     UFUNCTION(BlueprintCallable)
     void InitializeSystem(const FString& ServerKey, const FString& Host, int32 Port, bool UseSSL, bool EnableDebug, ENakamaClientType Type, float TickInterval, const FString& DisplayName);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ImportFacebookFriends(UNakamaSession* Session, const FString& Token, bool Reset, const FOnImportFacebookFriends& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void GetUsers(UNakamaSession* Session, TArray<FString> UserIds, TArray<FString> Usernames, TArray<FString> FacebookIds, const FOnGetUsers& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void GetUserAccount(UNakamaSession* Session, const FOnUserAccountInfo& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void GetFriends(UNakamaSession* Session, int32 Limit, ENakamaFriendState State, const FString& Cursor, const FOnFriendsList& Success, const FOnError& Error);
     
     UFUNCTION(BlueprintCallable)
@@ -231,55 +231,55 @@ public:
     UFUNCTION(BlueprintCallable)
     void Destroy();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void DemoteGroupUsers(UNakamaSession* Session, const FString& GroupId, TArray<FString> UserIds, const FOnDemoteGroupUsers& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void DeleteNotifications(UNakamaSession* Session, TArray<FString> NotificationIds, const FOnDeleteNotifications& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void DeleteLeaderboardRecord(UNakamaSession* Session, const FString& LeaderboardId, const FOnDeletedLeaderboardRecord& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void DeleteGroup(UNakamaSession* Session, const FString& GroupId, const FOnRemoveGroup& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void CreateGroup(UNakamaSession* Session, const FString& GroupName, const FString& Description, const FString& AvatarUrl, const FString& LanguageTag, bool Open, int32 MaxMembers, const FOnCreateGroup& Success, const FOnError& Error);
     
     UFUNCTION(BlueprintCallable)
     static UNakamaClient* CreateDefaultClient(const FString& ServerKey, const FString& Host, int32 Port, bool UseSSL, bool EnableDebug, ENakamaClientType Type, float TickInterval, const FString& DisplayName);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void BlockFriends(UNakamaSession* Session, TArray<FString> IDs, TArray<FString> Usernames, const FOnBlockedFriends& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AuthenticateSteam(const FString& SteamToken, const FString& username, bool CreateAccount, TMap<FString, FString> Vars, const FOnAuthUpdate& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AuthenticateGoogle(const FString& AccessToken, const FString& username, bool CreateAccount, TMap<FString, FString> Vars, const FOnAuthUpdate& Success, const FOnError& Error);
     
     UFUNCTION()
     void AuthenticateGameCenter(const FString& PlayerId, const FString& BundleId, int64 TimeStampSeconds, const FString& Salt, const FString& Signature, const FString& PublicKeyUrl, const FString& username, bool CreateAccount, TMap<FString, FString> Vars, const FOnAuthUpdate& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AuthenticateFacebook(const FString& AccessToken, const FString& username, bool CreateAccount, bool ImportFriends, TMap<FString, FString> Vars, const FOnAuthUpdate& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AuthenticateEmail(const FString& Email, const FString& password, const FString& username, bool CreateAccount, TMap<FString, FString> Vars, const FOnAuthUpdate& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AuthenticateDevice(const FString& DeviceID, const FString& username, bool CreateAccount, TMap<FString, FString> Vars, const FOnAuthUpdate& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AuthenticateCustom(const FString& UserID, const FString& username, bool CreateAccount, TMap<FString, FString> Vars, const FOnAuthUpdate& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AuthenticateApple(const FString& Token, const FString& username, bool CreateAccount, TMap<FString, FString> Vars, const FOnAuthUpdate& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AddGroupUsers(UNakamaSession* Session, const FString& GroupId, TArray<FString> UserIds, const FOnAddGroupUsers& Success, const FOnError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AddFriends(UNakamaSession* Session, TArray<FString> IDs, TArray<FString> Usernames, const FOnAddedFriend& Success, const FOnError& Error);
     
 };

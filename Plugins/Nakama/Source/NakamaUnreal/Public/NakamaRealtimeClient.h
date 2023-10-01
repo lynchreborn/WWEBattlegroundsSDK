@@ -129,10 +129,10 @@ public:
     FOnReceivedPartyPresence PartyPresenceReceived;
     
     UNakamaRealtimeClient();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UpdateStatus(const FString& StatusMessage, const FOnSetStatus& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void UnFollowUsers(TArray<FString> UserIds, const FOnUnFollowUsers& Success, const FOnRtError& Error);
     
     UFUNCTION(BlueprintCallable)
@@ -195,58 +195,58 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetListenerAllCallbacks();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void SetAppearOffline(const FOnSetStatus& Success, const FOnRtError& Error);
     
     UFUNCTION(BlueprintCallable)
     void SendPartyData(const FString& PartyId, int64 OpCode, const FString& Data);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void SendMessage(const FString& ChannelId, const FString& Content, const FOnWriteChatMessage& Success, const FOnRtError& Error);
     
     UFUNCTION(BlueprintCallable)
     void SendMatchData(const FString& MatchId, int64 OpCode, const FString& Data, TArray<FNakamaUserPresence> Presences);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void SendDirectMessage(const FString& UserID, const FString& Content, const FOnWriteChatMessage& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void RemovePartyMember(const FString& PartyId, FNakamaUserPresence Presence, const FOnRemovePartyMember& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void RemoveMatchMakerParty(const FString& PartyId, const FString& Ticket, const FOnRemoveMatchmakerParty& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void PromotePartyMember(const FString& PartyId, FNakamaUserPresence PartyMember, const FOnPromotePartyMember& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void ListPartyJoinRequests(const FString& PartyId, const FOnListPartyJoinRequests& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LeaveParty(const FString& PartyId, const FOnLeaveParty& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LeaveMatchmaker(const FString& Ticket, const FOnRemovedMatchmakerTicket& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LeaveMatch(const FString& MatchId, const FOnLeaveMatch& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void LeaveChat(const FString& ChannelId, const FOnLeaveChat& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void JoinParty(const FString& PartyId, const FOnJoinParty& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void JoinMatchByToken(const FString& Token, const FOnCreateMatch& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void JoinMatch(const FString& MatchId, TMap<FString, FString> MetaData, const FOnCreateMatch& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void JoinChat(const FString& ChatId, ENakamaChannelType ChannelType, bool Persistence, bool Hidden, const FOnJoinChat& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void FollowUsers(TArray<FString> UserIds, const FOnFollowUsers& Success, const FOnRtError& Error);
     
     UFUNCTION(BlueprintCallable)
@@ -255,25 +255,25 @@ public:
     UFUNCTION(BlueprintCallable)
     void Destroy();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void CreateParty(bool Open, int32 MaxSize, const FOnCreateParty& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void CreateMatch(const FOnCreateMatch& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void Connect(const FOnRealtimeClientConnected& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void CloseParty(const FString& PartyId, const FOnCloseParty& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AddMatchmakerParty(const FString& PartyId, const FString& Query, int32 MinCount, int32 MaxCount, TMap<FString, FString> StringProperties, TMap<FString, int32> NumericProperties, int32 CountMultiple, bool IgnoreCountMultiple, const FOnAddMatchmakerParty& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AddMatchmaker(int32 MinCount, int32 MaxCount, const FString& Query, TMap<FString, FString> StringProperties, TMap<FString, int32> NumericProperties, int32 CountMultiple, bool IgnoreCountMultiple, const FOnMatchmakerTicket& Success, const FOnRtError& Error);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void AcceptPartyMember(const FString& PartyId, FNakamaUserPresence Presence, const FOnAcceptPartyMember& Success, const FOnRtError& Error);
     
 };
