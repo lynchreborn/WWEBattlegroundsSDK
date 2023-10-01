@@ -1007,6 +1007,8 @@ public:
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void MulticastSetReducedSpeedModifierInTargetRival(float ModifierFactor);
+
+    void MulticastSetRootMotionMode(ERootMotionMode::Type Value);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void MulticastSetReducedDamageModifier(float ModifierFactor);

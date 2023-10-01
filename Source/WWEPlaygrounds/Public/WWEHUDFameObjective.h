@@ -3,6 +3,7 @@
 #include "SBUserWidget.h"
 #include "Blueprint/UserWidget.h"
 #include "WWEFameObjectiveInfo.h"
+#include "WWEPlaygrounds/Public/USBUserWidget.h"
 #include "WWEHUDFameObjective.generated.h"
 
 class UCanvasPanel;

@@ -1,8 +1,11 @@
 #include "PGLevelSequenceActor.h"
 
-void APGLevelSequenceActor::OnSequenceFinished() {
+APGLevelSequenceActor::APGLevelSequenceActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
+{
+    // Add your initialization code here
 }
 
-APGLevelSequenceActor::APGLevelSequenceActor() {
+void APGLevelSequenceActor::OnSequenceFinished()
+{
+    // Implement your sequence finished logic here
 }
-

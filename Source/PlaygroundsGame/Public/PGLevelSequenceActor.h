@@ -9,6 +9,7 @@ class PLAYGROUNDSGAME_API APGLevelSequenceActor : public ALevelSequenceActor {
 public:
     APGLevelSequenceActor();
 protected:
+    APGLevelSequenceActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void OnSequenceFinished();
     
