@@ -46,7 +46,7 @@ protected:
     void OnHideAnimation();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void BP_PlayAnimation(float StartAtTime, int32 NumberOfLoops, TEnumAsByte<EUMGSequencePlayMode::Type> PlayMode, float PlaybackSpeed);
+    void BP_PlayAnimation(float StartAtTime, int32 NumberOfLoops, float PlaybackSpeed);
     
     UFUNCTION(BlueprintCallable)
     void BP_CheckNextMessage();

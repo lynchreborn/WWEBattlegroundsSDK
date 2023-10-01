@@ -47,7 +47,7 @@ public:
     UWWEHUDChallengeMessage();
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void BP_PlayInAnimation(float StartAtTime, int32 NumberOfLoops, TEnumAsByte<EUMGSequencePlayMode::Type> PlayMode, float PlaybackSpeed, bool Left);
+    void BP_PlayInAnimation(float StartAtTime, int32 NumberOfLoops, float PlaybackSpeed, bool Left);
     
     UFUNCTION(BlueprintCallable)
     void BP_CheckNextMessage();
