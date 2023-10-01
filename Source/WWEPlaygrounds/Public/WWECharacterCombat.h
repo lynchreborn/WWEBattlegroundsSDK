@@ -992,6 +992,8 @@ private:
     
     UFUNCTION(BlueprintCallable)
     void OnCapsuleHitEvent(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+
+    void MulticastSetRootMotionMode_Implementation(TEnumAsByte<ERootMotionMode::Type> Value);
     
 public:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
