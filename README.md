@@ -15,6 +15,13 @@ C++ Header Based Modding Kit For WWE 2K Battlegrounds, Dumped using [UE4SS](http
 - Clone the repo or[ Download As Zip](https://github.com/lynchreborn/WWEBattlegroundsSDK/archive/refs/heads/main.zip " Download As Zip").
 - Extract The Zip.
 - Right click on "WWEPlaygrounds.uproject" and select "Switch Unreal Engine Version" and select 4.24
-- While not necessary, right click again and select "Generate Visual Studio Solution"
+- [![](https://i.imgur.com/HRIhBBg.png)](https://i.imgur.com/HRIhBBg.png)
+- This should create a WWEPlaygrounds.sln file. 
 - Double click the .uproject to open the project.
-
+- Select Yes to rebuild the plugin dummies. 
+- [![](https://i.imgur.com/Gu1jGvV.png)](https://i.imgur.com/Gu1jGvV.png)
+- If you installed VS2019 and 4.24 correctly, you should be seeing something like this in the Log. 
+- [![](https://i.imgur.com/ZEitWEr.png)](https://i.imgur.com/ZEitWEr.png)
+- After it compiles the plugins, the project should launch into Unreal Editor.
+- [![](https://i.imgur.com/X61nlsK.png)](https://i.imgur.com/X61nlsK.png)
+- Test a packaging by going to File > Package Project > Windows > Win 64
