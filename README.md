@@ -18,7 +18,7 @@ C++ Header Based Modding Kit For WWE 2K Battlegrounds, Dumped using [UE4SS](http
 - [![](https://i.imgur.com/HRIhBBg.png)](https://i.imgur.com/HRIhBBg.png)
 - This should create a WWEPlaygrounds.sln file. 
 - Double click the .uproject to open the project.
-- Select Yes to rebuild the plugin dummies. 
+- Select Yes to rebuild the modules. 
 - [![](https://i.imgur.com/Gu1jGvV.png)](https://i.imgur.com/Gu1jGvV.png)
 - If you installed VS2019 and 4.24 correctly, you should be seeing something like this in the Log. 
 - [![](https://i.imgur.com/ZEitWEr.png)](https://i.imgur.com/ZEitWEr.png)
