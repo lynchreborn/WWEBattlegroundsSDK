@@ -144,7 +144,8 @@ The main benefit of using this SDK is the ability to access custom blueprint and
 
 - This now allows you to make blueprints with that class as the parent, or replace the one you're looking at in `FModel`.
 
-##Parent and Child Classes
+###Parent and Child Classes
+Some blueprints have a deep chain of classes we need to create.
 
 - An example with a hierarchy of classes we need to create would be the character profile blueprints. These are found in `WWEPlaygrounds/Content/Character/Blueprints/Parameters/`
 
