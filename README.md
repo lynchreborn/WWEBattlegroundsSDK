@@ -121,3 +121,60 @@ If you are working on multiple mods in the same project, or have files you don't
 
 #### **NEGATIVES OF USING PAK CHUNKS:**
 No two mods can share the same `pakchunk` internal ID or else the user's game will crash. It is **ALWAYS** better to use the first method with UnrealPak unless you have a complex project with lots of dependancies you don't want to chunk. However, you can also just delete those dependancies (such as the character skeleton) before using UnrealPak. If you use a pakchunk, remember to make the pak chunk ID clear in the mod file name. 
+
+## Example of Accessing Custom WWEPlaygrounds Classes 
+
+The main benefit of using this SDK is the ability to access custom blueprint and data classes created by the developers that are necessary for creating blueprint and other types of mods that aren't just visual or audio. An example of this is adding characters or weapons to the game, changing what commentary plays for certain events, and other things like that. 
+
+- Using `FModel`, we can open up blueprint uassets and read them in `JSON`. Despite this JSON not being exportable, it gives us insights to recreating the data on our own.
+
+- For example, I am going to navigate to `WWEPlaygrounds/Content/Data/GameModeParameters`. In there is a file called `GameModeCombat1vs1.uasset`. By double clicking on it, I can open it in `JSON`.
+
+- We can see clearly that the `SuperStruct`, or rather the Class type of the blueprint is of class `SBGameModeParameters`
+
+- [![](https://i.imgur.com/x9cyIPp.png)](https://i.imgur.com/x9cyIPp.png)
+
+- In the Unreal Editor content browser, right click and create a new Blueprint Class asset. You will be greeted with the pop-up to select a class. Search for `SBGameModeParameters` and it should appear. Select it and create the Blueprint.
+
+- [![](https://i.imgur.com/NKTDM27.png)](https://i.imgur.com/NKTDM27.png)
+
+- If we double click and open the Blueprint, we can now see the custom properties that are available in `FModel` such as `GameModeID` and `GameModeClass`.
+
+- [![](https://i.imgur.com/oIqMyWJ.png)](https://i.imgur.com/oIqMyWJ.png)
+
+- This now allows you to make blueprints with that class as the parent, or replace the one you're looking at in `FModel`.
+
+###Parent and Child Classes
+
+- An example with a hierarchy of classes we need to create would be the character profile blueprints. These are found in `WWEPlaygrounds/Content/Character/Blueprints/Parameters/`
+
+- By opening one of these, we can see that the `SuperStruct` is actually an Object, which means a Blueprint or other type of asset. For a Technician, the `SuperStruct` object would be located at `WWEPlaygrounds/Content/Character/Blueprints/Parameters/TechnicianCharacterParameters\`
+
+- [![](https://i.imgur.com/2xqX4j0.png)](https://i.imgur.com/2xqX4j0.png)
+
+- So, to create a Technician Character Blueprint, we must first create the `TechnicianCharacterParameters` Blueprint. Let's open it in `FModel` to check it's `SuperStruct` class.
+
+- [![](https://i.imgur.com/jbCLMua.png)](https://i.imgur.com/jbCLMua.png)
+
+- We can see now that `TechnicianCharacterParameters` is ALSO a child, of the `SuperStruct` class `DefaultCharacterParameters`. We must also create that one as well. 
+
+- If we open `DefaultCharacterParameters`, we can finally see that we have reached the end of the chain. It's `SuperStruct` is not an object, but a class named `WWECharacterParameters`. This is what we will create in Unreal. 
+
+- [![](https://i.imgur.com/SZKjN2C.png)](https://i.imgur.com/SZKjN2C.png)
+
+- The file is kept in `WWEPlaygrounds/Content/Character/Blueprints/Parameters/_DefaultCharacterParameters`, so we have to create that hierarchy in our Unreal Editor. The proper parsing and re-creation of folders is shown below. If you can't see the image, in your main `Content` folder, create a `Characters` folder. Inside that, `Blueprints` folder. Inside that, `Paramaters` folder.
+
+- [![https://i.imgur.com/dxWG4i3.png](https://i.imgur.com/dxWG4i3.png "https://i.imgur.com/dxWG4i3.png")](https://i.imgur.com/dxWG4i3.png "https://i.imgur.com/dxWG4i3.png")
+
+- Create a new Blueprint Class. Search for the class `WWECharacterParameters` and then name your Blueprint `_DefaultCharacterParameters`.
+
+- [![](https://i.imgur.com/Xc9jCkA.png)](https://i.imgur.com/Xc9jCkA.png)
+
+- Now, right click on `_DefaultCharacterParameters` and select `Create Child Blueprint Class.` Name this blueprint `TechnicianCharacterParameters`. Now we have the base Technician parent class to instance and create Technicians.
+
+- [![](https://i.imgur.com/ySeAXja.png)](https://i.imgur.com/ySeAXja.png)
+
+- If we right click on `TechnicianCharacterParameters` and create a Child Blueprint Class (named anything), we can open it and set the necessary paramaters for building a wrestler.
+
+- [![](https://i.imgur.com/WxFrBvE.png)](https://i.imgur.com/WxFrBvE.png)
+
